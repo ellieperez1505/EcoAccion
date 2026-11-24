@@ -32,8 +32,8 @@ export default function AccionesReciclaje({ onSelectAccion }) {
   });
 
   return (
-    <section id="soluciones" className="section bg-alt">
-      <div className="container">
+    <section id="soluciones" className="section container">
+      <div className="section-wrapper-card">
         <div className="section-header text-center">
           <div className="section-tag">Economía Circular Escolar</div>
           <h2 className="section-title">🛠️ Prototipo de Acciones: Cómo Solucionamos la Contaminación</h2>

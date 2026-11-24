@@ -31,8 +31,8 @@ export default function CalculadoraImpacto() {
   };
 
   return (
-    <section id="calculadora" className="section bg-alt">
-      <div className="container">
+    <section id="calculadora" className="section container">
+      <div className="section-wrapper-card">
         <div className="section-header text-center">
           <div className="section-tag">Medición Cuantitativa</div>
           <h2 className="section-title">📊 Calculadora de Mitigación en el Patio Escolar</h2>

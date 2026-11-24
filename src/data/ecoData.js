@@ -2,25 +2,25 @@
 
 export const BG_PRESETS = [
   {
-    id: 'follaje',
-    name: '🌿 Hojas Verdes',
-    desc: 'Follaje botánico y luz solar',
+    id: 'bosque',
+    name: '🌲 Bosque Profundo',
+    desc: 'Pinos oscuros y atmósfera natural',
+    url: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80',
+    thumb: 'https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=120&q=60'
+  },
+  {
+    id: 'selva',
+    name: '🍃 Follaje Esmeralda Oscuro',
+    desc: 'Hojas botánicas con sombras profundas',
     url: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=1920&q=80',
     thumb: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=120&q=60'
   },
   {
     id: 'suelo',
-    name: '🌱 Suelo Fértil',
-    desc: 'Tierra regenerada y brote vivo',
+    name: '🌱 Suelo Fértil & Tierra Viva',
+    desc: 'Tierra húmeda y brote verde',
     url: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1920&q=80',
     thumb: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=120&q=60'
-  },
-  {
-    id: 'jardin',
-    name: '🌳 Jardín Escolar',
-    desc: 'Huerto escolar y biodiversidad',
-    url: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1920&q=80',
-    thumb: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=120&q=60'
   }
 ];
 
