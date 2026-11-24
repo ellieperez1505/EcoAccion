@@ -129,6 +129,40 @@ export default function PasosModal({ accion, onClose }) {
             </div>
           </div>
 
+          {/* Sección de Video Tutorial de Referencia */}
+          {accion.videoUrl && (
+            <div className="modal-video-box">
+              <div className="video-box-header">
+                <div className="video-header-left">
+                  <span className="video-cam-icon">🎬</span>
+                  <div>
+                    <h4 className="video-box-title">Video Tutorial de Referencia</h4>
+                    <span className="video-box-subtitle">{accion.videoTitle} • {accion.videoDuration}</span>
+                  </div>
+                </div>
+                <a
+                  href={accion.videoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-open-youtube"
+                  onClick={playPop}
+                >
+                  <span>▶️</span> Abrir en YouTube ↗
+                </a>
+              </div>
+
+              <div className="video-embed-wrapper">
+                <iframe
+                  src={accion.videoEmbedUrl}
+                  title={accion.videoTitle}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          )}
+
           {completed && (
             <div className="completed-celebration-banner animate-bounce">
               🎉 <strong>¡Proyecto Registrado con Éxito!</strong> Has aprendido la técnica técnica de valorización para <em>{accion.name}</em>. ¡Llévalo a tu aula o patio escolar!

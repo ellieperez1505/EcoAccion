@@ -201,3 +201,4 @@ export default function EcoGame({ isOpen, onClose }) {
     </div>
   );
 }
+

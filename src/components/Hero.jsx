@@ -214,3 +214,4 @@ export default function Hero({ onOpenGame }) {
     </section>
   );
 }
+

@@ -38,7 +38,7 @@ export default function AccionesReciclaje({ onSelectAccion }) {
           <div className="section-tag">Economía Circular Escolar</div>
           <h2 className="section-title">🛠️ Prototipo de Acciones: Cómo Solucionamos la Contaminación</h2>
           <p className="section-subtitle">
-            Cada residuo recogido en el patio tiene una ruta técnica de valorización dentro de la escuela. Haz clic en <strong>Pasos a seguir</strong> para ver la guía práctica interactiva.
+            Cada residuo recogido en el patio tiene una ruta técnica de valorización dentro de la escuela. Haz clic en <strong>Pasos a seguir</strong> o en <strong>🎥 Video</strong> para ver la guía práctica interactiva y el video de referencia.
           </p>
         </div>
 
@@ -319,15 +319,30 @@ export default function AccionesReciclaje({ onSelectAccion }) {
               <p className="action-summary">{act.summary}</p>
 
               <div className="action-card-footer">
-                <button 
-                  className="btn-paso-a-paso pulse-hover" 
-                  onClick={() => {
-                    playSuccess();
-                    onSelectAccion(act);
-                  }}
-                >
-                  <span>Pasos a seguir</span> ➔
-                </button>
+                <div className="action-buttons-group">
+                  <button 
+                    className="btn-paso-a-paso pulse-hover" 
+                    onClick={() => {
+                      playSuccess();
+                      onSelectAccion(act);
+                    }}
+                  >
+                    <span>Pasos a seguir</span> ➔
+                  </button>
+                  <a
+                    href={act.videoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-card-video"
+                    title={`Ver video de referencia: ${act.videoTitle}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      playPop();
+                    }}
+                  >
+                    <span>🎥</span> Video
+                  </a>
+                </div>
               </div>
             </div>
           ))}
@@ -336,3 +351,4 @@ export default function AccionesReciclaje({ onSelectAccion }) {
     </section>
   );
 }
+

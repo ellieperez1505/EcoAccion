@@ -95,3 +95,4 @@ export default function DiplomaModal({ isOpen, onClose, metrics, numStudents }) 
     </div>
   );
 }
+
