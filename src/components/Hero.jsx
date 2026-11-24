@@ -17,6 +17,7 @@ export default function Hero({ onOpenGame }) {
         <div className="hero-badge-container">
           <span className="badge-pill pulse-badge">🔬 Prototipo de Innovación Escolar 2026</span>
           <span className="badge-interactive">✨ Interactivo con React</span>
+          <span className="badge-photo">📸 Fondos de Naturaleza Libres de Derechos</span>
         </div>
 
         <h2 className="hero-title">

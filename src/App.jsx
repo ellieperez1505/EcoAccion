@@ -10,11 +10,14 @@ import Footer from './components/Footer';
 import PasosModal from './components/PasosModal';
 import EcoGame from './components/EcoGame';
 import FloatingParticles from './components/FloatingParticles';
+import BackgroundSwitcher from './components/BackgroundSwitcher';
+import { BG_PRESETS } from './data/ecoData';
 import './App.css';
 
 export default function App() {
   const [selectedAccion, setSelectedAccion] = useState(null);
   const [isGameOpen, setIsGameOpen] = useState(false);
+  const [activeBg, setActiveBg] = useState(BG_PRESETS[0]);
 
   // Esc keyboard shortcut to close modals
   useEffect(() => {
@@ -30,14 +33,25 @@ export default function App() {
 
   return (
     <div className="eco-app">
+      {/* Royalty-free Photography Background Wallpaper */}
+      <div 
+        className="app-background-wallpaper"
+        style={{ backgroundImage: `url(${activeBg.url})` }}
+        aria-hidden="true"
+      ></div>
+      <div className="app-background-overlay" aria-hidden="true"></div>
+
+      {/* Floating interactive background switcher */}
+      <BackgroundSwitcher activeBg={activeBg} onSelectBg={setActiveBg} />
+
       {/* Organic floating eco-particles */}
       <FloatingParticles />
 
       {/* Main navigation */}
       <Navbar onOpenGame={() => setIsGameOpen(true)} />
 
-      {/* Hero section */}
-      <main>
+      {/* Hero and main sections */}
+      <main className="main-content-layer">
         <Hero onOpenGame={() => setIsGameOpen(true)} />
         <PuntosClave />
         <AccionesReciclaje onSelectAccion={(act) => setSelectedAccion(act)} />
